@@ -5,10 +5,10 @@ import Logo from '../../public/Images/chow-logo.svg';
 import Cart from '../../public/Images/cart.svg';
 
 
-export const metadata = {
-  title: 'Chowdeck website clone coded by Praise_Oyeniyi.',
-  description: 'A Chowdeck app clone coded by Praise_Oyeniyi a Frontend Engineer from Lagos, Nigeria and Design Replicated by @Olatoba',
-}
+// export const metadata = {
+//   title: 'Chowdeck website clone coded by Praise_Oyeniyi.',
+//   description: 'A Chowdeck app clone coded by Praise_Oyeniyi a Frontend Engineer from Lagos, Nigeria and Design Replicated by @Olatoba',
+// }
 
 export default function RootLayout({ children }) {
   
