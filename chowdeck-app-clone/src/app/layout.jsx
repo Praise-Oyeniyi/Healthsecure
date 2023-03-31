@@ -1,10 +1,8 @@
-"use client"
 
 import './globals.css'
 import Image from 'next/image';
 import Logo from '../../public/Images/chow-logo.svg';
 import Cart from '../../public/Images/cart.svg';
-import { useState, useEffect } from 'react';
 
 
 export const metadata = {
@@ -13,28 +11,11 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
-
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    function handleResize() {
-      setWindowWidth(window.innerWidth);
-    }
-    
-    // Set up event listener
-    window.addEventListener('resize', handleResize);
-
-    // Clean up event listener
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
   
 
 
   return (
     <html lang="en"> 
-    {windowWidth > 1200? 
       <body className={`bg-bg-body w-full text-base overflow-x-hidden font-plus-sans  max-w-[2000pxu] mx-auto`}>
           <nav className='w-full font-medium text-lg my-10 sticky z-50 top-3 transition-all duration-200 ease-in-out'>
             <div className='flex-center w-[90%] mx-auto'>
@@ -80,7 +61,7 @@ export default function RootLayout({ children }) {
           {children}
                 
           </body>
-          :<div className='w-screen h-screen flex-center justify-center bg-bg-body'><h2 className='text-xl'>My Responsiveness Is Being Worked Upon...</h2></div>}
+          
     </html>
   )
 }
