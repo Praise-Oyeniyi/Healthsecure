@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en"> 
-    {windowWidth > 800? 
+    {windowWidth > 1200? 
       <body className={`bg-bg-body w-full text-base overflow-x-hidden font-plus-sans  max-w-[2000pxu] mx-auto`}>
           <nav className='w-full font-medium text-lg my-10 sticky z-50 top-3 transition-all duration-200 ease-in-out'>
             <div className='flex-center w-[90%] mx-auto'>
