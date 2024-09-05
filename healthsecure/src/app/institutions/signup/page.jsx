@@ -1,4 +1,4 @@
-import Buttons from '@/components/buttons'
+import Buttons from '../../../components/Buttons'
 import Footer from '@/components/Footer'
 import NavLogo from '@/components/NavLogo'
 import Signup from '@/components/Auth/SignupForm'

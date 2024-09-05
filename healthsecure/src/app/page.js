@@ -1,4 +1,4 @@
-import Buttons from '@/components/Buttons'
+import Buttons from '../components/Buttons'
 import Dropdown from "@/components/Dropdown";
 import Footer from "@/components/Footer";
 import Link from "next/link";

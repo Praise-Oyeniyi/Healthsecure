@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import Buttons from '@/components/buttons'
+import Buttons from '../../components/Buttons'
 import { FaRegEyeSlash, FaEye  } from "react-icons/fa";
 import Link from 'next/link'
 import { useForm } from 'react-hook-form'
