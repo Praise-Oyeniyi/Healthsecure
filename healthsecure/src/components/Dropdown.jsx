@@ -1,9 +1,17 @@
+'use client'
 import React from 'react'
 
-const Dropdown = () => {
+
+
+
+const Dropdown = ({register, setValue}) => {
   return (
-    <select className='w-full relative overflow-hidden outline-none border-none h-full'>
-        <option class="first" value="">Select Institution</option>
+    <select className='w-full relative overflow-hidden outline-none border-none h-full' 
+      {...register('select')}
+      onChange={(e) => setValue('select', e.target.value, { shouldValidate: true })}
+      >
+
+        <option className="first" value="">Select Institution</option>
         <option value="University of Abuja">University of Abuja</option>
         <option value="University of Agriculture, Abeokuta"> University of Agriculture, Abeokuta</option>
         <option value="University of Ado-Ekiti"> University of Ado-Ekiti</option>

@@ -23,7 +23,7 @@ const LoginForm = () => {
 
 
   return (
-    <form onSubmit={handleSubmit((data)=> login(data))} contol={control}>
+    <form onSubmit={handleSubmit((data)=> login(data))} control={control}>
         <div className='w-3/6 space-y-5 relative'>
             <div className='space-y-4 relative'>
                 <h3 className='text-lg font-bold'>Login into your account</h3>

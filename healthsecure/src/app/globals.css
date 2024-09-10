@@ -28,6 +28,21 @@ body {
 option{
   max-width: 50%;
 }
+.admin-form{
+  width:100%;
+  background-color: white;
+  border-radius: 0.375rem;
+  height:2.5rem;
+  padding: 0 0.5rem;
+  outline:none;
+  font-size: 1rem;
+}
+
+.labels{
+  font-size: 0.7rem;
+  text-align: left;
+  font-weight: 500;
+}
 
 
 @layer utilities {
