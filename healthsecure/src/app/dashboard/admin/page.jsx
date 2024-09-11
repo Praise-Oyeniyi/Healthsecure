@@ -8,6 +8,8 @@ import { MdSick } from "react-icons/md";
 import { GrSystem } from "react-icons/gr";
 import User from '@/components/Admin/User'
 import Logs from '@/components/Admin/Logs'
+import Patients from '@/components/Admin/Patients'
+import Doctor from '@/components/Admin/Doctor'
 import { SideContextProvider } from '@/contexts/SideBarContext';
 
 
@@ -23,11 +25,13 @@ const Admin = () => {
     },
     {
       menu:"Patients",
-      icon:<MdSick />
+      icon:<MdSick />,
+      page:<Patients/>
     },
     {
       menu:"Doctors",
-      icon:<FaStethoscope />
+      icon:<FaStethoscope />,
+      page:<Doctor/>
     },
     {
       menu:"System Logs",

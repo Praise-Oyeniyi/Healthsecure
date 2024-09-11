@@ -1,4 +1,4 @@
-import Buttons from '../../../components/Buttons'
+import Buttons from '../../components/Buttons'
 import Footer from '@/components/Footer'
 import NavLogo from '@/components/NavLogo'
 import Signup from '@/components/Auth/SignupForm'
@@ -14,7 +14,7 @@ const signup= () => {
             <div className="flex justify-between items-center h-14 w-full px-10">
                 <NavLogo/>
                 <div className="buttons">
-                    <Link href={'login'}>
+                    <Link href={'//futa.localhost:3000'}>
                         <Buttons style={'bg-[#6b32eb] text-white text-sm'} text={'Login'}/>
                     </Link>
                 </div>

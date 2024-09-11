@@ -10,21 +10,26 @@ export function middleware(request) {
   const parts = hostname.split('.')
 
   if (isLocalhost) {
-    // For localhost, check if there's a domain before 'localhost'
+    // For localhost, check if there's a subdomain before 'localhost'
     if (parts.length > 1 && parts[0] !== 'localhost' && parts[0] !== 'www') {
       const domain = parts[0]
+      console.log('Detected subdomain:', domain)
       url.pathname = `/${domain}`
+      console.log('Redirecting to:', url.pathname)
       return NextResponse.rewrite(url)
     }
   } else {
     // For non-localhost environments
     if (parts.length > 2) {
       const domain = parts[0]
+      console.log('Detected domain:', domain)
       url.pathname = `/${domain}`
+      console.log('Redirecting to:', url.pathname)
       return NextResponse.rewrite(url)
     }
   }
   
+  console.log('No redirect, continuing to:', url.pathname)
   return NextResponse.next()
 }
 
