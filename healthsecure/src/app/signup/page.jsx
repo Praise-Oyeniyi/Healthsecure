@@ -14,7 +14,7 @@ const signup= () => {
             <div className="flex justify-between items-center h-14 w-full px-10">
                 <NavLogo/>
                 <div className="buttons">
-                    <Link href={'//futa.localhost:3000'}>
+                    <Link href={'/futa'}>
                         <Buttons style={'bg-[#6b32eb] text-white text-sm'} text={'Login'}/>
                     </Link>
                 </div>

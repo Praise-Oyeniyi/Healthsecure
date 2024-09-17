@@ -28,7 +28,7 @@ const Institutions = () => {
             </div>
 
             <div className='flex flex-wrap justify-start items-stretch'>
-                <Link href={'//futa.localhost:3000'} className='w-[23%]'>
+                <Link href={'/futa'} className='w-[23%]'>
                     <div className='w-full space-y-2 border border-gray-200 shadow hover:shadow-sm rounded-md py-4 px-3 group'>
                         {/* <Image
                             src={''}

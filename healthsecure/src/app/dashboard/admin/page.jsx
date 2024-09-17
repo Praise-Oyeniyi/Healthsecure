@@ -46,7 +46,7 @@ const Admin = () => {
         <div className='h-full'>
           <div className='flex items-start'>
             <SideBar sidebarItems={items}/>
-            <TopBar/>
+            <TopBar user={'Admin'}/>
           </div>
 
           <div className='ml-[16.666%] h-full w-5/6 py-10 px-7'>

@@ -27,7 +27,7 @@ const Dashboard = () => {
         <div className='h-full'>
           <div className='flex items-start'>
             <SideBar sidebarItems={items}/>
-            <TopBar/>
+            <TopBar user={'User'}/>
           </div>
 
           <div className='ml-[16.666%] h-full w-5/6 py-10 px-7'>
