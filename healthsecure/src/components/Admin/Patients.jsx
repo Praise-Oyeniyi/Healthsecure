@@ -1,9 +1,16 @@
 import { dummyData } from '@/constants/data'
+import { useRouter } from 'next/navigation';
 import React from 'react'
 import Buttons from '../Buttons'
 
 const Patients = () => {
     const pat = dummyData.filter((e)=>e.role === 'patient');
+
+    const router = useRouter();
+    const handleClick = ()=> {
+        router.push('/dashboard/admin/error')
+    }
+
 
   return (
     <div className="patient-outer space-y-4">
@@ -29,7 +36,7 @@ const Patients = () => {
                       <li className='w-[10%] '>{e.name}</li>
                       <li className='max-w-1/6 place-self-start'>{e.email}</li>
                       <li className={`w-[10%] capitalize ${e.role === 'doctor'? 'text-green-500': e.role=== 'nurse'? 'text-red-500':'text-gray-700'} `}>{e.role}</li>
-                      <li className='w-[10%]'><Buttons text={'Delete'} style={'bg-red-700 text-white rounded-none '}/></li>
+                      <li className='w-[10%]'><Buttons text={'Delete'} click={()=>handleClick()} style={'bg-red-700 text-white rounded-none '}/></li>
                     </ul>
                 ))}
               </div>

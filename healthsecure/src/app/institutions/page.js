@@ -1,6 +1,5 @@
 import Buttons from '../../components/Buttons'
 import NavLogo from '@/components/NavLogo'
-import Image from 'next/image'
 import { FaLink } from "react-icons/fa";
 import React from 'react'
 import Link from 'next/link';

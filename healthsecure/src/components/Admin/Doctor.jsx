@@ -1,13 +1,14 @@
 import { dummyData } from '@/constants/data'
+import { useRouter } from 'next/navigation'
 import React from 'react'
 import Buttons from '../Buttons'
 
 const Doctor = () => {
+  const router = useRouter();
     const doc = dummyData.filter((e)=>e.role === 'doctor');
 
     const handleClick = ()=> {
-        console.log('222')
-        // alert('You would need an additional admin to be able to perform such operation')
+        router.push('/dashboard/admin/error')
     }
 
   return (
@@ -22,6 +23,7 @@ const Doctor = () => {
                 <li className='w-[10%]'>User</li>
                 <li className='w-1/6'>Email</li>
                 <li className='w-[10%]'>Role</li>
+                <li className='w-[10%]'>Patients</li>
                 <li className='w-[10%]'>Specialization</li>
                 <li className='w-[10%]'>Delete</li>
             </ul>
@@ -35,8 +37,9 @@ const Doctor = () => {
                       <li className='w-[10%] '>{e.name}</li>
                       <li className='max-w-1/6 place-self-start'>{e.email}</li>
                       <li className={`w-[10%] capitalize ${e.role === 'doctor'? 'text-green-500': e.role=== 'nurse'? 'text-red-500':'text-gray-700'} `}>{e.role}</li>
+                      <li className='w-[10%]'>{e?.patients.length}</li>
                       <li className='w-[10%]'>{e.specialization}</li> 
-                      <li className='w-[10%]'><Buttons text={'Delete'} click={handleClick()} style={'bg-red-700 text-white rounded-none '}/></li>
+                      <li className='w-[10%]'><Buttons text={'Delete'} click={()=>handleClick()} style={'bg-red-700 text-white rounded-none '}/></li>
                     </ul>
                 ))}
               </div>

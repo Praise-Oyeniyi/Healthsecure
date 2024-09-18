@@ -7,7 +7,7 @@ import { dummyData } from '@/constants/data';
 const Patients = () => {
     const rows = dummyData.filter((e) => e.role === 'patient')
     .map((e) => ({
-      id: e.id,
+      id: e.school_id,
       fullName: e.name,
       age: '35',
       email: e.email,

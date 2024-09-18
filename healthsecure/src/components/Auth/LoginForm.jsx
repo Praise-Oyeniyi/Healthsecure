@@ -4,11 +4,13 @@ import Buttons from '../../components/Buttons'
 import { FaRegEyeSlash, FaEye  } from "react-icons/fa";
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup';
-import { fromSchema } from '@/constants/schemas/authSchema'
+import {signInSchema } from '@/constants/schemas/authSchema'
 import { login } from '@/app/institutions/login/actions';
+import { useRouter } from 'next/navigation';
 
 
 const LoginForm = () => {
+    const router = useRouter()
     const [see, setSee] = useState(false)
     const {
         register,
@@ -16,14 +18,19 @@ const LoginForm = () => {
         handleSubmit,
         formState:{errors},
     } = useForm({
-        resolver:yupResolver(fromSchema)
+        resolver:yupResolver(signInSchema)
     });
+
+    const Submit = (data)=>{
+        login(data)
+        router.push('/mfa')
+    }
 
 
 
 
   return (
-    <form onSubmit={handleSubmit((data)=> login(data))} control={control}>
+    <form onSubmit={handleSubmit(Submit)} control={control}>
         <div className='w-3/6 space-y-5 relative'>
             <div className='space-y-4 relative'>
                 <h3 className='text-lg font-bold'>Login into your account</h3>

@@ -1,23 +1,23 @@
 import Footer from '@/components/Footer'
 import SideBar from '@/components/SideBar';
 import TopBar from '@/components/TopBar';
-import Patients from '@/components/Patients';
 import { FaUser,FaCalendarCheck } from "react-icons/fa";
 import { GiMedicines } from "react-icons/gi";
+import User from '@/components/User';
 
 
 const Dashboard = () => {
   const items = [
     {
-      menu:"Patients",
+      menu:"My Dashboard",
       icon:<FaUser/>
     },
     {
-      menu:"Appointments",
+      menu:"Schedule Appointment",
       icon:<FaCalendarCheck/>
     },
     {
-      menu:"Medicines",
+      menu:"Request Refill",
       icon:<GiMedicines/>
     },
   ]
@@ -31,7 +31,7 @@ const Dashboard = () => {
           </div>
 
           <div className='ml-[16.666%] h-full w-5/6 py-10 px-7'>
-            <Patients/>
+            <User/>
           </div>
 
         </div>
