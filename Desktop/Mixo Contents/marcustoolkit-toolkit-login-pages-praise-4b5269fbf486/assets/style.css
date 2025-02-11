@@ -1,0 +1,78 @@
+:root {
+    --blue: #8a2b30;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #8a2b30;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --pink: #8a2b30;
+    --slate: #263340;
+    --cta: #20e4bd;
+    --bodyFont: Nunito;
+    --headingFont: Eurostile;
+    --titleFont: "Arial", "Helvetica", sans-serif;
+    --siteWidth: 1400px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+.toolkit{
+    color: #8a2b30;
+}
+.container{
+    padding-top:4.5rem ;
+}
+.head-text{
+    font-size: 2.3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #263340;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+.footer-bg{
+    background-color: #263340;
+}
+.footer{
+    background-color: #263340;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.footer-inner{
+    width: 100%;
+    padding: 1.5rem;
+    margin: 0 auto;
+    text-align: center;
+}
+.footer-inner p{
+    color: #ccc;
+    font-size: 14px;
+}
